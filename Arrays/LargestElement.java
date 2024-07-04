@@ -1,3 +1,4 @@
+//Time complexity: O(N)
 import java.util.*;
 public class LargestElement{
     public static void largestElement(int[] arr){
@@ -23,7 +24,6 @@ public class LargestElement{
     }
 }
 
-/*
 import java.util.*;
 public class LargestElement{
     public static void largestElement(int[] arr){
@@ -51,6 +51,7 @@ public class LargestElement{
     }
 }
 
+//Time complexity: O(N)
 import java.util.*;
 public class LargestElement{
     public static void largestElement(int[] arr){
@@ -69,4 +70,3 @@ public class LargestElement{
         System.out.println("Largest element in the Array is : " + arr[n-1]);
     }
 }
-*/
