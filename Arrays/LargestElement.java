@@ -3,7 +3,7 @@ public class LargestElement{
     public static void largestElement(int[] arr){
         int largest = arr[0];
         for(int i = 0 ; i < arr.length ; i++){
-            if(arr[0]<arr[i]){
+            if(largest<arr[i]){
                 largest = arr[i];
             }
         }
