@@ -1,5 +1,5 @@
-Time Complexity : O(N)
-left rotate array by one place
+// Time Complexity : O(N)
+// left rotate array by one place
 import java.util.*;
 public class RotateArray {
     public static void rotateArray(int[] arr) {
@@ -25,9 +25,9 @@ public class RotateArray {
     }
 }
 
-Left rotate array by D place
-Brute Force Approach
-Time Complexity: O(N+D),Space Complexity: O(d)
+// Left rotate array by D place
+// Brute Force Approach
+// Time Complexity: O(N+D),Space Complexity: O(d)
 import java.util.*;
 public class RotateArray {
     public static void rotateArray(int[] arr, int n, int d) {
@@ -61,8 +61,8 @@ public class RotateArray {
     }
 }
 
-Using Recursion
-Time Complexity: O(N*D),Space Complexity: O(1)
+// Using Recursion
+// Time Complexity: O(N*D),Space Complexity: O(1)
 import java.util.*;
 public class RotateArray {
     public static void leftRotate(int arr[], int d, int n)
@@ -96,8 +96,8 @@ public class RotateArray {
     }
 }
 
-Optimal Approach
-Time Complexity: O(2D),Space Complexity: O(1)
+// Optimal Approach
+// Time Complexity: O(2D),Space Complexity: O(1)
 import java.util.*;
 public class RotateArray {
     public static void reverse(int arr[], int start, int end) {
