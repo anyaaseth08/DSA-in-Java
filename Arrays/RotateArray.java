@@ -25,11 +25,9 @@ public class RotateArray {
     }
 }
 
-left rotate array by D place
+Left rotate array by D place
 Brute Force Approach
-Time Complexity: O(N+D)
-Space Complexity: O(d)
-
+Time Complexity: O(N+D),Space Complexity: O(d)
 import java.util.*;
 public class RotateArray {
     public static void rotateArray(int[] arr, int n, int d) {
@@ -65,8 +63,7 @@ public class RotateArray {
 }
 
 Optimal Approach
-Time Complexity: O(N*D)
-Space Complexity: O(1)
+Time Complexity: O(N*D),Space Complexity: O(1)
 import java.util.*;
 public class RotateArray {
     public static void leftRotate(int arr[], int d, int n)
