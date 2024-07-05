@@ -62,7 +62,7 @@ public class RotateArray {
     }
 }
 
-Optimal Approach
+Using Recursion
 Time Complexity: O(N*D),Space Complexity: O(1)
 import java.util.*;
 public class RotateArray {
@@ -91,6 +91,114 @@ public class RotateArray {
         System.out.println("Enter the number of times you want to rotate array : ");
         int d = sc.nextInt();
         leftRotate(arr,d,n);
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+import java.util.*;
+public class RotateArray {
+    public static void leftRotate(int arr[], int d, int n)
+    {
+        for (int i = 0; i < d; i++)
+            leftRotatebyOne(arr, n);
+    }
+    public static void leftRotatebyOne(int arr[], int n)
+    {
+        int i, temp;
+        temp = arr[0];
+        for (i = 0; i < n - 1; i++)
+            arr[i] = arr[i + 1];
+        arr[i] = temp;
+    }
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the Array : ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements of the array : ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Enter the number of times you want to rotate array : ");
+        int d = sc.nextInt();
+        leftRotate(arr,d,n);
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+Using Recursion
+Time Complexity: O(N*D),Space Complexity: O(1)
+import java.util.*;
+public class RotateArray {
+    public static void leftRotate(int arr[], int d, int n)
+    {
+        for (int i = 0; i < d; i++)
+            leftRotatebyOne(arr, n);
+    }
+    public static void leftRotatebyOne(int arr[], int n)
+    {
+        int i, temp;
+        temp = arr[0];
+        for (i = 0; i < n - 1; i++)
+            arr[i] = arr[i + 1];
+        arr[i] = temp;
+    }
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the Array : ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements of the array : ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Enter the number of times you want to rotate array : ");
+        int d = sc.nextInt();
+        leftRotate(arr,d,n);
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+Optimal Approach
+Time Complexity: O(2D),Space Complexity: O(1)
+import java.util.*;
+public class RotateArray {
+    public static void reverse(int arr[], int start, int end) {
+        while (start <= end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    public static void leftRotate(int arr[], int n, int d) {
+        if (n == 0) {
+            return;
+        }
+        d = d % n;
+        reverse(arr, 0, d - 1);
+        reverse(arr, d, n - 1);
+        reverse(arr, 0, n - 1);
+    }
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the Array : ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements of the array : ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Enter the number of times you want to rotate array : ");
+        int d = sc.nextInt();
+        leftRotate(arr, n, d);
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
